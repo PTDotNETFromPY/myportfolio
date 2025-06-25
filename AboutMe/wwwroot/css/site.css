@@ -1,0 +1,311 @@
+﻿/* site.css - Technology-themed Portfolio Styles */
+
+:root {
+    --bg: #0d1117;
+    --text: #c9d1d9;
+    --card: #161b22;
+    --highlight: #58a6ff;
+    --accent: #1f6feb;
+}
+
+body.light-mode {
+    --bg: #fdfdfd;
+    --text: #111;
+    --card: #ffffff;
+    --highlight: #0078d7;
+    --accent: #005a9e;
+}
+
+body {
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    scroll-behavior: smooth;
+}
+
+/* === Glow Background === */
+.glow-bg {
+    position: fixed;
+    top: -20%;
+    left: -20%;
+    width: 160%;
+    height: 160%;
+    background: radial-gradient(circle, rgba(88,166,255,0.08), transparent 60%);
+    z-index: -1;
+    animation: rotateGlow 120s linear infinite;
+}
+
+@keyframes rotateGlow {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* === Header === */
+header {
+    text-align: center;
+    padding: 4rem 1rem 2rem;
+    position: relative;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: 2px solid var(--highlight);
+    color: var(--highlight);
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s, color 0.3s;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+    .theme-toggle i {
+        transition: transform 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+        background: var(--highlight);
+        color: var(--bg);
+    }
+
+.logo-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--highlight);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+    .avatar:hover {
+        transform: scale(1.1);
+    }
+
+.typing {
+    font-size: 2.5rem;
+    font-weight: 800;
+    border-right: 3px solid var(--highlight);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(30) forwards, blink-caret 0.75s step-end infinite;
+    color: var(--highlight);
+}
+
+.subtyping {
+    font-size: 1.2rem;
+    color: #8b949e;
+    animation: fadeIn 2s ease-in forwards;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    0%, 100% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: var(--highlight);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* === Navigation === */
+nav {
+    margin-top: 2rem;
+}
+
+    nav a {
+        color: var(--text);
+        text-decoration: none;
+        margin: 0 1.2rem;
+        font-weight: 600;
+        position: relative;
+        transition: 0.3s;
+    }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--highlight);
+            transition: width 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--highlight);
+        }
+
+            nav a:hover::after {
+                width: 100%;
+            }
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--text);
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 30px;
+    }
+
+    .nav-expanded {
+        display: flex;
+        flex-direction: column;
+        background: var(--card);
+        position: absolute;
+        right: 20px;
+        top: 80px;
+        padding: 1rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+}
+
+/* === Sections === */
+section {
+    padding: 3rem;
+    margin: 3rem auto;
+    max-width: 900px;
+    background: var(--card);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+    section:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    }
+
+/* === Metrics === */
+.metrics {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.stat {
+    background: var(--card); 
+    border: 1px solid var(--accent);
+    border-radius: 14px;
+    padding: 2rem;
+    text-align: center;
+    width: 160px;
+    color: var(--text);
+    transition: 0.3s;
+}
+
+
+    .stat:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 24px var(--highlight);
+    }
+
+    .stat i {
+        font-size: 2.5rem;
+        color: var(--highlight);
+        margin-bottom: 0.5rem;
+    }
+
+/* === Footer === */
+footer {
+    background: #161b22;
+    color: #8b949e;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
+
+.social-links a {
+    color: var(--highlight);
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+    .social-links a:hover {
+        color: #1f6feb;
+    }
+
+/* === Cursor Effect === */
+.cursor-effect {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: var(--highlight);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: cursorTrail 0.5s ease-out forwards;
+    opacity: 0.8;
+    z-index: 9999;
+}
+
+@keyframes cursorTrail {
+    from {
+        transform: scale(1.8);
+        opacity: 0.6;
+    }
+
+    to {
+        transform: scale(0.2);
+        opacity: 0;
+    }
+}

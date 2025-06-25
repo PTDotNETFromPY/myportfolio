@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Trung Pham Portfolio</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;800&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="glow-bg"></div>
+
+    <header data-aos="zoom-in">
+        <button class="theme-toggle" onclick="toggleTheme()">
+            <i class="fas fa-moon"></i>
+        </button>
+
+        <div class="logo-area">
+            <img src="@Url.Content("~/image/avatar.jpg")" alt="Trung Pham" class="avatar" />
+
+            <h1 id="typewriter" class="typing"></h1>
+            <p class="subtyping">A Passionate .NET Backend Developer</p>
+        </div>
+
+        <button class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+        <nav id="nav-links" class="nav-collapsed">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main role="main" class="container">
+        @RenderBody()
+
+        <section class="metrics" data-aos="fade-up">
+            <div class="stat"><i class="fa-solid fa-code"></i><p><strong>8+</strong><br />Projects</p></div>
+            <div class="stat"><i class="fa-solid fa-graduation-cap"></i><p><strong>3.56</strong><br />GPA</p></div>
+            <div class="stat"><i class="fa-solid fa-briefcase"></i><p><strong>1</strong><br />Internships</p></div>
+        </section>
+    </main>
+
+    <footer data-aos="fade-up">
+        <p>&copy; 2025 - Trung Pham | UEH - College of Technology and Design</p>
+        <div class="social-links">
+            <a href="mailto:phamtrung2004py@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://github.com/PhamTrung1204" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/phamtrung2004py" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="/files/TrungPham_CV.pdf" download title="Download CV"><i class="fa-solid fa-file-arrow-down"></i> Download CV</a>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="~/js/site.js"></script>
+</body>
+</html>
