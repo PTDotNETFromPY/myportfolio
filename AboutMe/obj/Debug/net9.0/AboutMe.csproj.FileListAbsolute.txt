@@ -94,5 +94,6 @@ C:\Users\PhamTrung\Desktop\DemoATM\AboutMe\AboutMe\obj\Debug\net9.0\refint\About
 C:\Users\PhamTrung\Desktop\DemoATM\AboutMe\AboutMe\obj\Debug\net9.0\AboutMe.pdb
 C:\Users\PhamTrung\Desktop\DemoATM\AboutMe\AboutMe\obj\Debug\net9.0\AboutMe.genruntimeconfig.cache
 C:\Users\PhamTrung\Desktop\DemoATM\AboutMe\AboutMe\obj\Debug\net9.0\ref\AboutMe.dll
-C:\Users\PhamTrung\Desktop\DemoATM\AboutMe\AboutMe\obj\Debug\net9.0\compressed\9ljpifl07v-61ao2zyhf0.gz
-C:\Users\PhamTrung\Desktop\DemoATM\AboutMe\AboutMe\obj\Debug\net9.0\compressed\xdd9c1rrd1-3kkilvvf88.gz
+C:\Users\PhamTrung\Desktop\DemoATM\AboutMe\AboutMe\obj\Debug\net9.0\AboutMe.sourcelink.json
+C:\Users\PhamTrung\Desktop\DemoATM\AboutMe\AboutMe\obj\Debug\net9.0\compressed\9ljpifl07v-8g5t8na482.gz
+C:\Users\PhamTrung\Desktop\DemoATM\AboutMe\AboutMe\obj\Debug\net9.0\compressed\xdd9c1rrd1-dysesrrkih.gz
